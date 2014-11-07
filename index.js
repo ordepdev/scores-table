@@ -25,6 +25,17 @@ module.exports.live = function (cb) {
   });
 }
 
+module.exports.finished = function (cb) {
+  scores(function (data) {
+    [].forEach.call(data, function (el) {
+      if (!lib.isFinished(el.status)) return;
+      el.status = lib.colorify(el.status);
+      table.push([el.status, el.home, el.result, el.away]);
+    });
+    cb(null, table.toString());
+  });
+}
+
 module.exports.team = function (team, cb) {
   scores(function (data) {
     [].forEach.call(data, function (el) {

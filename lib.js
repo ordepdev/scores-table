@@ -18,6 +18,10 @@ module.exports.isLive = function (status) {
   return (status === 'HT' || status.indexOf("'") > -1);
 }
 
+module.exports.isFinished = function (status) {
+  return (status === 'FT');
+}
+
 module.exports.isPlaying = function (team, match) {
   return match.home.toLowerCase().indexOf(team) > -1
       || match.away.toLowerCase().indexOf(team) > -1;

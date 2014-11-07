@@ -22,6 +22,12 @@ $ scores-table
 $ scores-table -l
 ```
 
+#### finished results
+
+```
+$ scores-table -f
+```
+
 #### team results
 
 ```
