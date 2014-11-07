@@ -1,7 +1,7 @@
 {
   "name": "scores-table",
   "version": "0.1.1",
-  "description": "Football results in your cli",
+  "description": "football results in your command line",
   "bin": {
     "scores-table": "cli.js"
   },
@@ -15,16 +15,14 @@
   "author": "ordepdev",
   "license": "MIT",
   "devDependencies": {
-    "ansi-styles": "^1.1.0",
     "request": "^2.45.0",
     "split": "^0.3.0",
     "through": "^2.3.6",
-    "through2": "^0.6.3",
     "trumpet": "^1.7.0"
   },
   "dependencies": {
     "cli-table": "^0.3.1",
     "colors": "^1.0.3",
-    "scores-parser": "0.0.2"
+    "scores-parser": "1.0.1"
   }
 }
