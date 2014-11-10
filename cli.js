@@ -13,9 +13,11 @@ function help() {
     '    scores-table',
     '    ',
     '  Options',
-    '    -l         Outputs only live matches',
-    '    -f         Outputs only finished matches',
-    '    -t <team>  Outputs only matches from <team>'
+    '    -l         Outputs live matches',
+    '    -f         Outputs finished matches',
+    '    -t <team>  Outputs matches from <team>',
+    '    -p         Outputs matches from the previous day',
+    '    -n         Outputs matches from the next day'
   ].join('\n'));
 }
 
@@ -51,6 +53,22 @@ if (argv === '-f') {
 
 if (argv === '-t') {
   scores.team(process.argv[3].toLowerCase(), function (err, data) {
+    if (err) throw err;
+    console.log('\n' + data);
+  });
+  return;
+}
+
+if (argv === '-p') {
+  scores.previous(function (err, data) {
+    if (err) throw err;
+    console.log('\n' + data);
+  });
+  return;
+}
+
+if (argv === '-n') {
+  scores.next(function (err, data) {
     if (err) throw err;
     console.log('\n' + data);
   });

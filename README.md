@@ -34,6 +34,18 @@ $ scores-table -f
 $ scores-table -t <team>
 ```
 
+#### previous day results
+
+```
+$ scores-table -p
+```
+
+#### next day results
+
+```
+$ scores-table -n
+```
+
 ## License
 
 MIT
