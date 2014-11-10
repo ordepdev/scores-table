@@ -1,4 +1,4 @@
-var scores  = require('../scores-parser/');
+var scores  = require('scores-parser');
 var lib     = require('./lib');
 var Table   = require('cli-table');
 var moment  = require('moment');
