@@ -23,7 +23,7 @@
   "dependencies": {
     "cli-table": "^0.3.1",
     "colors": "^1.0.3",
-    "scores-parser": "2.0.0",
+    "scores-parser": "3.0.0",
     "moment": "^2.8.3"
   }
 }
